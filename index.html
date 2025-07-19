@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fios.io</title>
+  <title>Fios Dictionary</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>📘Fios</h1>
-      <button id="darkModeToggle">🌙</button>
-    </div>
-    
-    <input type="text" id="wordInput" placeholder="Enter a word..." />
-    <button onclick="searchWord()">Search</button>
+  <div class="app">
+    <header class="app-header">
+      <h1 class="logo">📘 Fios</h1>
+      <button id="darkModeToggle" title="Toggle dark mode">🌙</button>
+    </header>
 
-    <h3>📅 Word of the Day:</h3>
-    <p id="dailyWord" class="highlight"></p>
+    <section class="search-section">
+      <input type="text" id="wordInput" placeholder="Search a word..." />
+      <button onclick="searchWord()">Define</button>
+    </section>
 
-    <div id="result" class="result-box"></div>
+    <section class="daily-word">
+      <h3>📅 Word of the Day:</h3>
+      <p id="dailyWord" class="highlight"></p>
+    </section>
+
+    <section id="result" class="result-box"></section>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
