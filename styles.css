@@ -1,95 +1,116 @@
-
 :root {
-  --bg-color: #fff7f0;
-  --text-color: #333;
-  --primary-color: #ff865e;
-  --card-bg: #ffffff;
-  --input-border: #ffd6b2;
-}
-
-body.dark {
-  --bg-color: #1e1e1e;
-  --text-color: #e0e0e0;
-  --card-bg: #2c2c2c;
-  --input-border: #444;
+  --bg-light: #fff9f5;
+  --bg-dark: #1c1c1c;
+  --text-light: #1e1e1e;
+  --text-dark: #eaeaea;
+  --accent: #f89b5c;
+  --card-light: #ffffff;
+  --card-dark: #2c2c2c;
+  --shadow: rgba(0, 0, 0, 0.08);
 }
 
 body {
-  background: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
 }
 
-.container {
-  background: var(--card-bg);
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 450px;
-  text-align: center;
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
 
-.header {
+.app {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.app-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-h1 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
+.logo {
+  color: var(--accent);
+  font-size: 1.8rem;
+  margin: 0;
 }
 
-input {
-  width: 80%;
-  padding: 10px;
-  border: 2px solid var(--input-border);
+#darkModeToggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.search-section {
+  display: flex;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid var(--accent);
   border-radius: 8px;
-  font-size: 16px;
-  margin-bottom: 10px;
-  background: var(--card-bg);
-  color: var(--text-color);
+  background-color: transparent;
+  color: inherit;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: var(--primary-color);
+  padding: 0.75rem 1rem;
+  background-color: var(--accent);
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  transition: background 0.2s;
 }
 
 button:hover {
-  background-color: #ff6536;
+  background-color: #f5792c;
 }
 
-#darkModeToggle {
-  font-size: 20px;
-  background: none;
-  color: var(--text-color);
-  border: none;
-  cursor: pointer;
-}
-
-.result-box {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.result-box audio {
-  margin-top: 10px;
+.daily-word {
+  margin-bottom: 1.5rem;
 }
 
 .highlight {
-  color: var(--primary-color);
+  color: var(--accent);
   font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.result-box {
+  background-color: var(--card-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px var(--shadow);
+  transition: background 0.3s;
+}
+
+body.dark .result-box {
+  background-color: var(--card-dark);
+}
+
+.result-box h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.result-box p {
+  margin: 0.5rem 0;
+}
+
+audio {
+  margin-top: 1rem;
+  width: 100%;
 }
