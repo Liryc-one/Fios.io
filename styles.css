@@ -1,1 +1,95 @@
 
+:root {
+  --bg-color: #fff7f0;
+  --text-color: #333;
+  --primary-color: #ff865e;
+  --card-bg: #ffffff;
+  --input-border: #ffd6b2;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --card-bg: #2c2c2c;
+  --input-border: #444;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #ff6536;
+}
+
+#darkModeToggle {
+  font-size: 20px;
+  background: none;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+}
+
+.result-box {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.result-box audio {
+  margin-top: 10px;
+}
+
+.highlight {
+  color: var(--primary-color);
+  font-weight: bold;
+}
